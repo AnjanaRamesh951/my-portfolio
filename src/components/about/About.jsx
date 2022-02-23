@@ -1,38 +1,29 @@
 import React from 'react'
 import './about.css'
-import Award from '../../img/award.jpg'
 
 const About = () => {
   return (
     <div className="a">
       <div className="a-left">
-
         <div className="a-card bg"></div>
         <div className="a-card">
           <img src="https://images.pexels.com/photos/9186151/pexels-photo-9186151.jpeg" alt="" className="a-img" />
-        </div> 
+        </div>
       </div>
+
       <div className="a-right">
-        <h1 className="a-title">About Me</h1>
         <p className="a-sub">
-          Hello World, Am a Fullstack Developer based out of India. 
+          "First, solve the problem. Then, write the code. "
         </p>
-        <p className="a-desc">
-          "I love combining the worlds of eye catching and user friendly websites."
+        <p className='author'>
+          - John Johnson
         </p>
         <div className="a-award">
-          <img src={Award} alt="" className="a-award-img" />
           <div className="a-award-texts">
             <h4 className="a-award-title">
-              Certified MERN STACK Developer
+              I'm a Full Stack Developer based out of India, with a certification in MERN stack development, and a passion for finding practical solutions for real-world problems. I specialize in creating custom websites that are both aesthetic and user-friendly. And when I'm not toiling away on a project, I'm busy writing for my blog.
             </h4>
-            {/* <h4 className="a-award-title">
-              Certified MERN STACK Developer
-            </h4> */}
-<p className="a-award-desc">
-              I completed MERN STACK Development Certification Course
-            </p>
-          </div>            
+          </div>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, {useContext,useRef,useState} from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './contact.css'
 import phone from "../../img/phone.png"
 import email from "../../img/email.jpg"
@@ -9,26 +9,26 @@ import { ThemeContext } from '../../context'
 
 
 const Contact = () => {
-    const formRef=useRef();
-    const [done,setDone]=useState(false)
-    const theme=useContext(ThemeContext);
-  const darkMode=theme.state.darkMode;
-    const handleSubmit=(e)=>{
+    const formRef = useRef();
+    const [done, setDone] = useState(false)
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
+    const handleSubmit = (e) => {
         e.preventDefault()
         emailjs
-        .sendForm(
-            'service_2jjsrg6',
-             'template_0xoc9z6',
-              formRef.current,
-               'user_roLRXrilk4F0BLFniNCY9')
-        .then((result) => {
-            console.log(result.text);
-            setDone(true)
-        }, (error) => {
-            console.log(error.text);
-        });
+            .sendForm(
+                'service_2jjsrg6',
+                'template_0xoc9z6',
+                formRef.current,
+                'user_roLRXrilk4F0BLFniNCY9')
+            .then((result) => {
+                console.log(result.text);
+                setDone(true)
+            }, (error) => {
+                console.log(error.text);
+            });
     }
-    
+
     return (
         <div className="c">
             <div className="c-bg"></div>
@@ -41,38 +41,38 @@ const Contact = () => {
                                 src={phone}
                                 alt=""
                                 className="c-icon"
-                             />
-                             +91 9562032325
+                            />
+                            +91 9562032325
                         </div>
                         <div className="c-info-item">
                             <img
                                 src={email}
                                 alt=""
                                 className="c-icon"
-                             />
-                             2anjanaramesh@gmail.com
+                            />
+                            2anjanaramesh@gmail.com
                         </div>
                         <div className="c-info-item">
                             <img
                                 src={address}
                                 alt=""
                                 className="c-icon"
-                             />
-                             Tortoyis Villa
+                            />
+                            Tortoyis Villa
                         </div>
                     </div>
                 </div>
                 <div className="c-right">
                     <p className="c-desc">
-                        <b>what's your story?</b>
-                        Get in touch always
+                        <b>Got some queries? Get in touch!
+                        </b>
                     </p>
                     <form ref={formRef} onSubmit={handleSubmit}>
-                        <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Name" name="user_name" />
-                        <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="subject" name="user_subject" />
-                        <input style={{backgroundColor: darkMode && "#333"}} type="text" placeholder="Email" name="user_email" />
-                        <textarea style={{backgroundColor: darkMode && "#333"}} placeholder="Message" name="message" rows="5"></textarea>
-                    
+                        <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Name" name="user_name" />
+                        <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="subject" name="user_subject" />
+                        <input style={{ backgroundColor: darkMode && "#333" }} type="text" placeholder="Email" name="user_email" />
+                        <textarea style={{ backgroundColor: darkMode && "#333" }} placeholder="Message" name="message" rows="5"></textarea>
+
                         <button>Submit</button>
                         {done && "Thank you.."}
                     </form>

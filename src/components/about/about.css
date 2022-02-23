@@ -11,7 +11,6 @@
     justify-content: center;
     position: relative;
     height: 100%;
-    /* width: 100%; */
 }
 .a-right{
     flex:1
@@ -50,6 +49,7 @@
 }
 .a-sub{
     margin:20px 0px;
+    font-size: 150%;
 }
 .a-desc{
     font-weight: 300;
@@ -67,6 +67,7 @@
     font-weight: bold;
     color:#555;
     margin-bottom: 10px;
+    
 
 }
 @media screen and (max-width:480px){
@@ -87,4 +88,8 @@
     .a-right{
         padding: 20px;
     }
+}
+.author{
+    padding-left: 40%;
+    font-size: 150%;
 }

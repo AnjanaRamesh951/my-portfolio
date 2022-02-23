@@ -4,26 +4,20 @@ import me from "../../img/me.png"
 
 const Intro = () => {
   return (
-
-    //intro
     <div className="i">
-        <div className="i-left">
+      <div className="i-left">
         <div className="i-left-wrapper">
-          <h2 className="i-intro">Hi, I'm</h2>
-          <h1 className='i-name'> Anjana Ramesh P T</h1>
+          <h2 className="i-intro">Hello world, I'm Anjana Ramesh P T</h2>
+          <h4 className='i-name'>  I create custom websites.</h4>
           <div className="i-title">
             <div className="i-title-wrapper">
               <div className="i-title-item">Web developer</div>
-             
 
-             
-              <div className="i-title-item">Writer</div>
+
+
+              <div className="i-title-item">Front-End Designer</div>
             </div>
           </div>
-       
-          <p className="i-desc">
-           Fullstack Developer from India
-          </p>
         </div>
         <svg
           width="75"
@@ -81,11 +75,11 @@ const Intro = () => {
             </g>
           </g>
         </svg>
-                </div>
-        <div className="i-right">
-          <div className="i-bg"></div>
+      </div>
+      <div className="i-right">
+        <div className="i-bg"></div>
         <img src={me} alt="" className="i-img" />
-        </div>
+      </div>
 
 
     </div >
